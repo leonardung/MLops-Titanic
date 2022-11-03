@@ -13,8 +13,8 @@ from statsmodels.nonparametric import smoothers_lowess
 from pandas import Series, DataFrame
 from patsy import dmatrices
 from sklearn import datasets, svm
-import KaggleAux.predict as ka
-from visualization import data_visualization, logit_visualization, SVC_features_visualization
+from Helper.predict import predict
+from Helper.visualization import data_visualization, logit_visualization, SVC_features_visualization
 import sklearn.ensemble as ske
 
 class Model():
@@ -74,7 +74,7 @@ class Model():
         Series of the predictions
         
         """
-        compared_resuts = ka.predict(self.test_data, self.results, 'Logit')
+        compared_resuts = predict(self.test_data, self.results, 'Logit')
         compared_resuts = Series(compared_resuts)  # convert our model to a series for easy output
         if save:
             compared_resuts.to_csv("data/output/logitregres.csv")

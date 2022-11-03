@@ -6,17 +6,9 @@ Created on Fri Oct 28 17:50:54 2022
 """
 
 
-import matplotlib.pyplot as plt
-import numpy as np
+
 import pandas as pd
-import statsmodels.api as sm
-from statsmodels.nonparametric.kde import KDEUnivariate
-from statsmodels.nonparametric import smoothers_lowess
-from pandas import Series, DataFrame
-from patsy import dmatrices
-from sklearn import datasets, svm
-import KaggleAux.predict as ka
-from visualization import data_visualization
+from Helper.visualization import data_visualization
 
 class Data:
     def __init__(self, datafile = "data/train.csv"):

@@ -9,7 +9,7 @@ from Data import Data
 from Model import Model
 data = Data()
 print(df:=data.df_processed.head())
-# data.visualize_data()
+data.visualize_data()
 model=Model(data.df_processed)
 results=model.fit_logit(plot=False)
 print(results.summary())
