@@ -4,17 +4,14 @@ Created on Mon Oct 31 13:09:52 2022
 
 @author: Leonard
 """
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import statsmodels.api as sm
-from statsmodels.nonparametric.kde import KDEUnivariate
-from statsmodels.nonparametric import smoothers_lowess
 from pandas import Series, DataFrame
 from patsy import dmatrices
-from sklearn import datasets, svm
+from sklearn import svm
 from Helper.predict import predict
-from Helper.visualization import data_visualization, logit_visualization, SVC_features_visualization
+from Helper.visualization import logit_visualization, SVC_features_visualization
 import sklearn.ensemble as ske
 
 class Model():
