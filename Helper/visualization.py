@@ -10,7 +10,7 @@ from sklearn import datasets, svm
 import numpy as np
 
 def data_visualization(df):
-    fig = plt.figure(figsize=(18,6), dpi=1600) 
+    fig = plt.figure(figsize=(18,6))#, dpi=1600) 
     alpha=alpha_scatterplot = 0.2 
     alpha_bar_chart = 0.55
 
@@ -77,7 +77,7 @@ def data_visualization(df):
     ax2.set_ylim(-1, 2)
     
     
-    fig = plt.figure(figsize=(18,4), dpi=1600)
+    fig = plt.figure(figsize=(18,4))#, dpi=1600)
     alpha_level = 0.65
 
     # building on the previous code, here we create an additional subset with in the gender subset 
@@ -111,6 +111,7 @@ def data_visualization(df):
     ax4.set_xticklabels(["Died","Survived"], rotation=0)
     ax4.set_xlim(-1, len(male_highclass))
     plt.legend(loc='best')
+    plt.show()
 
 def logit_visualization(x,y,res):
     # Plot Predictions Vs Actual
@@ -133,7 +134,7 @@ def logit_visualization(x,y,res):
     # ## So how well did this work?
     # Lets look at the predictions we generated graphically:
 
-    fig = plt.figure(figsize=(18,9), dpi=1600)
+    fig = plt.figure(figsize=(18,9))#, dpi=1600)
     a = .2
 
     # Below are examples of more advanced plotting. 
@@ -165,6 +166,7 @@ def logit_visualization(x,y,res):
     plt.title("The Change of Survival Probability by Age")
     plt.xlabel("Predicted chance of survival")
     plt.ylabel("Age")
+    plt.show()
 
 def SVC_features_visualization(x,y,feature_1=2,feature_2=3,gamma=3,poly=False):
     X = np.asarray(x)
@@ -224,4 +226,4 @@ def SVC_features_visualization(x,y,feature_1=2,feature_2=3,gamma=3,poly=False):
                    levels=[-.5, 0, .5])
 
         plt.title(kernel)
-        plt.show()
+    plt.show()

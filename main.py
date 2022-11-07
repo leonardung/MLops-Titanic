@@ -12,7 +12,7 @@ data = Data()
 print(df:=data.df_processed.head())
 data.visualize_data()
 model=Model(data.df_processed)
-results=model.fit_logit(plot=False)
+results=model.fit_logit(plot=True)
 print(results.summary())
 test_data_path = "data/test.csv"
 prediction=model.predict_logit(save=False)
